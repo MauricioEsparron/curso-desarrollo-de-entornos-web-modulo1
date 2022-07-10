@@ -1,0 +1,57 @@
+<html>
+
+<head>
+
+  <meta charset = "utf-8">
+  <title>System Ciber Product</title>
+  <link type = "text/css" rel = "stylesheet" href = "css/estilos.css">
+  <script src = "js/utensilios.js"></script>
+
+</head>
+
+<body onload = "rotacion()">
+
+  <div class = "portada"></div>
+
+  <div style = "display: flex; justify-content: center">
+
+    <ul class = "menu">
+      <li><a href = "#">Home</a></li>
+      <li>
+        <a href = "#">Compra</a>
+        <ul>
+          <li><a href = "tecnologia.html">Tecnologia</a></li>
+          <li><a href = "ropa.html">Ropa</a></li>
+          <li><a href = "utensilios.html">Utensilios</a></li>
+        </ul>
+      </li>
+      <li><a href = "#">Servicios</a></li>
+      <li><a href = "contacto.html">Contacto</a></li>
+    </ul>
+
+  </div>
+
+  <div style = "margin: 0 auto; margin-top: 150px; width: 30%">
+
+    <div style = "width: 100%; text-align: center">
+        <a href = "#" onclick = "cambiarImagen(0)">[0]</a>
+        <a href = "#" onclick = "cambiarImagen(1)">[1]</a>
+        <a href = "#" onclick = "cambiarImagen(2)">[2]</a>
+        <img id = "imagen" src = "img/cucharas.jpg" width = "100%">
+    </div>
+
+    <div style = "display: flex">
+        <div style = "width: 30%">
+            <p><input style = "width: 10%" type = "checkbox" value = "Cucharas" name = "utensilio" />Cucharas</p>
+            <p><input style = "width: 10%" type = "checkbox" value = "Tenedores" name = "utensilio" />Tenedores</p>
+            <p><input style = "width: 10%" type = "checkbox" value = "Cuchillos" name = "utensilio" />Cuchillos</p>
+            <button onclick = "consultarUtensilios(); return false" style = "width: 70%" class = "btn btn-primary btn-block btn-large">Consultar</button>
+        </div>
+        <div id = "respuesta" style = "width: 70%; display: flex; flex-direction: column; justify-content: center; align-items: center"></div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

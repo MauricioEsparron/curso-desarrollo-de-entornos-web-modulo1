@@ -1,0 +1,76 @@
+<html>
+
+<head>
+
+  <title>System Ciber Product</title>
+  <link type = "text/css" rel = "stylesheet" href = "css/estilos.css">
+  <script src = "js/servicios.js"></script>
+
+</head>
+
+<body>
+
+  <div class = "portada"></div>
+
+  <div style = "display: flex; justify-content: center">
+
+    <ul class = "menu">
+      <li><a href = "#">Home</a></li>
+      <li>
+        <a href = "#">Compra</a>
+        <ul>
+          <li><a href = "tecnologia.html">Tecnologia</a></li>
+          <li><a href = "ropa.html">Ropa</a></li>
+          <li><a href = "utensilios.html">Utensilios</a></li>
+        </ul>
+      </li>
+      <li><a href = "servicios.html">Servicios</a></li>
+      <li><a href = "contacto.html">Contacto</a></li>
+    </ul>
+
+  </div>
+
+  <div style = "margin: 0 auto; margin-top: 150px; width: 30%">
+
+    <div id = "zonas">
+      <h1 style = "text-align: justify">Te haremos entrega de tus pedidos donde quiera que estés, 
+        según el orden de prioridad de la zona</h1>
+      <p>Callao</p>
+      <p>Lince</p>
+      <p>Surquillo</p>
+    </div>
+
+    <h3 style = "text-align: justify">Puedes escoger las siguientes opciones de prioridad de zonas:</h3>
+    <p>
+      <span onclick= "insertarZonaDebajo()" style = "cursor: pointer">Insertar la zona</span>
+      <span><input id = "nombreZonaDeBajo" type = "textfield" style = "width: 40%; text-align: center" placeholder = "Nombre"/></span>
+      <span onclick= "insertarZonaDebajo()" style = "cursor: pointer">debajo del</span>
+      <span><input id = "numZonaDeBajo" type = "textfield" style = "width: 15%; text-align: center" placeholder = "Num"/></span>
+    </p>
+    <p>
+      <span onclick="insertarDelante()" style = "cursor: pointer">Insertar la zona</span>
+      <span><input  id = "nombreZonaDelante" type = "textfield" style = "width: 40%; text-align: center" placeholder = "Nombre"/></span>
+      <span onclick = "insertarDelante()" style = "cursor: pointer">delante del</span>
+      <span><input id = "numZonaDelante" type = "textfield" style = "width: 15%; text-align: center" placeholder = "Num"/></span>
+    </p>
+    <p>
+      <span style = "cursor: pointer">Reemplazar la zona</span>
+      <span><input type = "textfield" style = "width: 15%; text-align: center" placeholder = "Num"/></span>
+      <span style = "cursor: pointer">por</span>
+      <span><input type = "textfield" style = "width: 40%; text-align: center" placeholder = "Nombre"/></span>
+    </p>
+    <p>
+      <span style = "cursor: pointer">Borrar la zona</span>
+      <span><input type = "textfield" style = "width: 15%; text-align: center" placeholder = "Num"/></span>
+    </p>
+    <p>
+      <span style = "cursor: pointer">Copiar la zona</span>
+      <span><input type = "textfield" style = "width: 15%; text-align: center" placeholder = "Num"/></span>
+      <span style = "cursor: pointer">al final</span>
+    </p>
+
+  </div>
+
+</body>
+
+</html>

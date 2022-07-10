@@ -1,0 +1,90 @@
+<html>
+
+<head>
+  
+  <meta charset = "utf-8">
+  <title>System Ciber Product</title>
+  <link type = "text/css" rel = "stylesheet" href = "css/estilos.css">
+  <script src = "js/index.js"></script>
+
+</head>
+
+<body>
+
+  <div class = "portada"></div>
+
+  <div style = "display: flex; justify-content: center">
+
+    <ul class = "menu">
+      <li><a href = "#">Home</a></li>
+      <li>
+        <a href = "#">Compra</a>
+        <ul>
+          <li><a href = "tecnologia.html">Tecnologia</a></li>
+          <li><a href = "ropa.html">Ropa</a></li>
+          <li><a href = "utensilios.html">Utensilios</a></li>
+        </ul>
+      </li>
+      <li><a href = "servicios.html">Servicios</a></li>
+      <li><a href = "contacto.html">Contacto</a></li>
+    </ul>
+
+  </div>
+
+  <!--FORMULARIO-->
+  <div style = "margin: 0 auto; margin-top: 150px; width: 10%">
+
+    <form>
+
+        <select id = "tecnologia" onchange = "mostrarItem()">
+            <option></option>
+            <option value = "l">Laptops</option>
+            <option value = "i">Impresoras</option>
+            <option value = "c">Celulares</option>
+        </select>
+
+        <input id = "cantidad" placeholder = "Cantidad a comprar" onkeyup = "mostrarCantidad()" />
+        <button class = "ingresarVale" onclick = "ingresarVale(); return false">Ingresar Vale</button>
+        <input class = "vale" id = "vale" placeholder = "Vale de Descuento" disabled/>
+        <button class = "btn btn-primary btn-block btn-large" onclick = "comprar(); return false">Comprar</button>
+
+    </form>
+
+    <!--RESUMEN-->
+    <div id = "Resumen">
+      <p><strong>Item: </strong>Null</p>
+      <p><strong>Cantidad: </strong>0</p>
+      <div class = "precio">[Debe comprar para visualizar el precio]</div>
+    </div>
+
+  </div>
+
+  <script>
+
+    var tieneVale = 0; //Inicializado en vale no válido
+
+    function ingresarVale(){
+        var vale;
+        var objVale;
+
+        vale = prompt("Introducir vale de descuento");
+        
+        if(vale == "1245FC"){
+            alert("Descuento válido");
+            objVale = document.getElementById("vale");
+            objVale.value = vale;
+            tieneVale = 1;
+        }
+        else{
+            alert("Descuento inválido");
+            objVale = document.getElementById("vale");
+            objVale.value = "NO APLICA";
+        }
+
+    }
+
+  </script>
+
+</body>
+
+</html>

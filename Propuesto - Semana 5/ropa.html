@@ -1,0 +1,78 @@
+<html>
+
+<head>
+
+  <title>System Ciber Product</title>
+  <link type = "text/css" rel = "stylesheet" href = "css/estilos.css">
+  <link type = "text/css" rel = "stylesheet" href = "css/estilosRopa.css">
+  <script src = "js/ropa.js"></script>
+
+</head>
+
+<body>
+
+  <div class = "portada"></div>
+
+  <div style = "display: flex; justify-content: center">
+
+    <ul class = "menu">
+      <li><a href = "#">Home</a></li>
+      <li>
+        <a href = "#">Compra</a>
+        <ul>
+          <li><a href = "tecnologia.html">Tecnologia</a></li>
+          <li><a href = "ropa.html">Ropa</a></li>
+          <li><a href = "utensilios.html">Utensilios</a></li>
+        </ul>
+      </li>
+      <li><a href = "#">Servicios</a></li>
+      <li><a href = "contacto.html">Contacto</a></li>
+    </ul>
+
+  </div>
+
+  <!--Formulario-->
+  <div style = "margin: 0 auto; margin-top: 150px; width: 30%">
+
+    <div id = "bloque1">
+        <select id = "ropa" onchange = "mostrarPrecio()">
+            <option></option>
+            <option value = "z">Zapatos</option>
+            <option value = "s">Sacos</option>
+            <option value = "c">Camisas</option>
+            <option value = "j">Jeans</option>
+        </select>
+    </div>
+
+    <div id = "bloque2">
+
+        <div style = "width: 20%"></div>
+        <div style = "width: 40%">
+            <input type = "text" id = "cantidad" placeholder = "Cantidad" />
+            <p><strong>Precio sin IGV: </strong></p>
+        </div>
+        <div style = "width: 40%; display: flex; flex-direction: column; justify-content: center; align-items: flex-end">
+            <div><button class = "btn btn-primary btn-block btn-large" onclick = "adicionarCarrito(); return false">Carrito</button></div>
+        </div>
+
+    </div>
+
+    <div style = "width: 100%; height: 20px; float: left"></div>
+
+    <div id = "bloque3">
+
+        <table id = "miTabla">
+            <tr>
+                <th>Item</th>
+                <th>Cantidad</th>
+                <th>Precio inc IGV</th>
+            </tr>
+        </table>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

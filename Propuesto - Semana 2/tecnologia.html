@@ -1,0 +1,90 @@
+<html>
+
+<head>
+  
+  <meta charset = "utf-8">
+  <title>System Ciber Product</title>
+  <link type = "text/css" rel = "stylesheet" href = "css/estilos.css">
+  <script src = "js/index.js"></script>
+
+</head>
+
+<body>
+
+  <div class = "portada"></div>
+
+  <div style = "display: flex; justify-content: center">
+
+    <ul class = "menu">
+      <li><a href = "#">Home</a></li>
+      <li>
+        <a href = "#">Compra</a>
+        <ul>
+          <li><a href = "tecnologia.html">Tecnologia</a></li>
+          <li><a href = "#">Ropa</a></li>
+          <li><a href = "#">Utensilios</a></li>
+        </ul>
+      </li>
+      <li><a href = "#">Servicios</a></li>
+      <li><a href = "#">Contacto</a></li>
+    </ul>
+
+  </div>
+
+  <!--FORMULARIO-->
+  <div style = "margin: 0 auto; margin-top: 150px; width: 10%">
+
+    <form>
+
+        <select id = "tecnologia" onchange = "mostrarItem()">
+            <option></option>
+            <option value = "l">Laptops</option>
+            <option value = "i">Impresoras</option>
+            <option value = "c">Celulares</option>
+        </select>
+
+        <input id = "cantidad" onkeyup = "mostrarCantidad()" placeholder = "Cantidad a comprar"/>
+        <button class = "ingresarVale" onclick = "ingresarVale(); return false">Ingresar Vale</button>
+        <input id = "vale" class = "vale" placeholder = "Vale de Descuento" disabled/>
+        <button class = "btn btn-primary btn-block btn-large" onclick = "comprar(); return false">Comprar</button>
+
+    </form>
+
+    <div id = "Resumen">
+      <p><strong>Item: </strong>Null</p>
+      <p><strong>Cantidad: </strong>0</p>
+      <div class = "precio">[Debe comprar para visualizar el precio]</div>
+    </div>
+
+  </div>
+
+  <script>
+    
+    var promocionValida = 0; //Inicializado como promoción inválida
+
+    function ingresarVale(){
+      
+      var vale;
+      var objVale;
+
+      vale = prompt("Introducir vale de descuento");
+
+      if(vale == "1245FC"){
+        alert("Descuento válido");
+        objVale = document.getElementById("vale");
+        objVale.value = vale;
+        promocionValida = 1;
+      }
+      else{
+        alert("Descuento inválido");
+        objVale = document.getElementById("vale");
+        objVale.value = "NO APLICA";
+      }
+
+    }
+
+  </script>
+
+</body>
+
+</html>

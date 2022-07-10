@@ -1,0 +1,49 @@
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <title>System Ciber Product</title>
+  <link type = "text/css" rel = "stylesheet" href = "css/estilos.css">
+  <script src = "js/contacto.js"></script>
+
+</head>
+
+<body>
+
+  <div class = "portada"></div>
+
+  <div style = "display: flex; justify-content: center">
+
+    <ul class = "menu">
+      <li><a href = "#">Home</a></li>
+      <li>
+        <a href = "#">Compra</a>
+        <ul>
+          <li><a href = "tecnologia.html">Tecnologia</a></li>
+          <li><a href = "ropa.html">Ropa</a></li>
+          <li><a href = "utensilios.html">Utensilios</a></li>
+        </ul>
+      </li>
+      <li><a href = "#">Servicios</a></li>
+      <li><a href = "contacto.html">Contacto</a></li>
+    </ul>
+
+  </div>
+
+  <div style = "margin: 0 auto; margin-top: 150px; width: 30%">
+
+    <label>Déjanos tu comentario [Máximo 100 caracteres]</label>
+    <textarea style = "resize: none" id = "comentario" placeholder = "Escribir su comentario aquí" rows = "10" cols = "65"></textarea>
+    <p>Caracteres Restantes: <span id = "restante">100</span></p>
+
+  </div>
+
+  <script>
+      document.getElementById("comentario").addEventListener("keyup", limitar);
+      document.getElementById("comentario").addEventListener("keydown", limitar);
+  </script>
+
+</body>
+
+</html>

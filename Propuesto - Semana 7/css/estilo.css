@@ -1,0 +1,22 @@
+body{
+    background-color: gray;
+}
+
+.titulo{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+    background-color: darkgray;
+}
+
+.formulario{
+    width: 100%;
+    height: auto;
+    margin: 10px 0px 10px 0px;
+    background-color: white;
+}
+
+table{
+    margin: 0 auto;
+}
